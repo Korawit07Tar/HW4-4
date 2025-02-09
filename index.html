@@ -90,6 +90,25 @@
             displayQuestions();
             startTimer();
         }
+
+        function displayQuestions() {
+            const quizContainer = document.getElementById("quizContainer");
+            quizContainer.innerHTML = "";
+            selectedQuestions.forEach(q => {
+                const questionDiv = document.createElement("div");
+                questionDiv.classList.add("mb-3");
+                questionDiv.innerHTML = `<p class="fw-bold">${q.text}</p>`;
+                q.choices.forEach(choice => {
+                    questionDiv.innerHTML += `
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question${q.id}" value="${choice}" onchange="submitAnswer(${q.id}, '${choice}')">
+                            <label class="form-check-label">${choice}</label>
+                        </div>
+                    `;
+                });
+                quizContainer.appendChild(questionDiv);
+            });
+        }
     </script>
 </body>
 

@@ -125,6 +125,16 @@
                 }
             }, 1000);
         }
+
+        function calculateScore() {
+            let score = 0;
+            selectedQuestions.forEach(q => {
+                if (userAnswers[q.id] === q.correct) {
+                    score += 5;
+                }
+            });
+            return score;
+        }
     </script>
 </body>
 

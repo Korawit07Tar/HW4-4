@@ -60,6 +60,14 @@
         let userAnswers = {};
         let timer;
         let timeLeft;
+
+        function saveToLocalStorage(key, data) {
+            try {
+                localStorage.setItem(key, JSON.stringify(data));
+            } catch (error) {
+                console.error("Error saving to localStorage:", error);
+            }
+        }
     </script>
 </body>
 

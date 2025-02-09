@@ -1,1 +1,28 @@
 # HW4-4
+-  git clone https://github.com/Korawit07Tar/HW4-4.git
+-  git add .
+-  git commit -m "สร้างโครงสร้าง HTML" 
+-  git add .
+-  git commit -m "ลิ้งค์ Boostrap5"
+-  git add .
+-  git commit -m "สร้างโครงสร้างหน้าเว็บแบบทดสอบ"
+-  git add .
+-  git commit -m "สร้างคำถาม 20 ข้อ และ กำหนดเวลา 120 วิ และคะแนนที่ผ่าน"
+-  git add .
+-  git commit -m  "สร้างฟังก์ชันใช้สำหรับการบันทึกลง LocalStorage"
+-  git add .
+-  git commit -m "สร้างฟังก์ชันใช้สำหรับดึงข้อมูลจาก localstorage"
+-  git add .
+-  git commit -m "สร้างฟังก์ชันสำหรับเริ่มต้นทำ Quiz" 
+-  git add .
+-  git commit -m "สร้างฟังก์ชันใช้สำหรับ แสดงคำถามและตัวเลือก" 
+-  git add .
+-  git commit -m "สร้างฟังก์ชันใช้สำหรับ บันทึกคำตอบ"
+-  git add .
+-  git commit -m "สร้างฟังก์ชันสำหรับเริ่มจับเวลาในการทำ Quiz"
+-  git add .
+-  git commit -m "สร้างฟังก์ชัน คำนวณคะแนน"
+-  git add .
+-  git commit -m "สร้างฟังก์ชัน แสดงผลลัพธ์ของแบบทดสอบ"
+-  git add .
+-  git commit -m "Comment"

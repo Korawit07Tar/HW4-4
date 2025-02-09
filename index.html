@@ -53,7 +53,7 @@
                 { id: 20, text: "ความเร็วสูงสุดที่กฎหมายกำหนดในการขับขี่ในเมืองทั่วไปอยู่ที่ประมาณเท่าใด?", choices: ["ก.80 km/h", "ข.100 km/h", "ค.120 km/h", "ง.130 km/h"], correct: "ก.80 km/h" }
             ],
             timelimit: 120,
-            passingScore: 120
+            passingScore: 50
         };
 
         let selectedQuestions = [];
@@ -134,6 +134,25 @@
                 }
             });
             return score;
+        }
+        function showResults() {
+            clearInterval(timer);
+            const score = calculateScore();
+            const resultContainer = document.getElementById("resultContainer");
+            resultContainer.innerHTML = `<p class="fw-bold">คะแนนของคุณ: ${score} / 100</p>`;
+
+            if (score >= quiz.passingScore) {
+                resultContainer.innerHTML += `<p class="text-success">คุณผ่านข้อสอบ!</p>`;
+            } else {
+                resultContainer.innerHTML += `<p class="text-danger">คุณไม่ผ่านข้อสอบ</p>`;
+            }
+
+            resultContainer.innerHTML += `<h2>เฉลยคำตอบ</h2>`;
+            selectedQuestions.forEach(q => {
+                resultContainer.innerHTML += `<p>${q.text} - คำตอบที่ถูกต้อง: <strong>${q.correct}</strong></p>`;
+            });
+
+            resultContainer.innerHTML += `<div class="text-center mt-3"><button class="btn btn-warning" onclick="location.reload()">🔄เริ่มทำข้อสอบใหม่</button></div>`;
         }
     </script>
 </body>

@@ -113,6 +113,18 @@
         function submitAnswer(questionId, answer) {
             userAnswers[questionId] = answer;
         }
+
+        function startTimer() {
+            const timerElement = document.getElementById("time");
+            timer = setInterval(() => {
+                timeLeft--;
+                timerElement.innerText = `เวลาที่เหลือ: ${timeLeft} วินาที`;
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    showResults();
+                }
+            }, 1000);
+        }
     </script>
 </body>
 
